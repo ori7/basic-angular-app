@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { of, throwError, Observable } from 'rxjs';
-import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
@@ -10,7 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class AuthService {
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor() {}
 
   login(email: string, password: string): Observable<string> {
     if (email === 'a@a.com' && password === 'aaa') {

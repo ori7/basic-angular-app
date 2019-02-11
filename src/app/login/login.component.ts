@@ -14,6 +14,20 @@ export class LoginComponent implements OnInit {
 
   }
 
+  login(emailHtmlElement, passwordHtmlElement) {
+    this.authService
+    .login(emailHtmlElement.value, passwordHtmlElement.value)
+    .subscribe((successRes) => {
+      console.log(successRes);
+      this.router.navigate(["Member"]);
+    }, (errorRes) => {
+      console.log(errorRes);
+      emailHtmlElement.value = '';
+      passwordHtmlElement.value = '';
+    })
+    
+  }
+
   ngOnInit() {
   }
 
