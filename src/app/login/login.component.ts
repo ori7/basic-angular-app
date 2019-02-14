@@ -22,8 +22,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(["Member"]);
     }, (errorRes) => {
       console.log(errorRes);
-      emailHtmlElement.value = '';
-      passwordHtmlElement.value = '';
+      emailHtmlElement.value = passwordHtmlElement.value = '';
     })
     
   }
