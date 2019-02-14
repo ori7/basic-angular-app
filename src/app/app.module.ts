@@ -8,10 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { MemberComponent } from './member/member.component';
 import { HeaderComponent } from './header/header.component';
 import { AuthGuard } from './guards/auth.guard';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
+  { path: 'Register', component: RegisterComponent },
   { path: 'Member', component: MemberComponent, canActivate: [AuthGuard] }
 ];
 
@@ -21,11 +25,13 @@ const routes: Routes = [
     LoginComponent,
     HomeComponent,
     MemberComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

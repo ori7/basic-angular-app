@@ -1,0 +1,20 @@
+<form class="col-3" #myForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input [(ngModel)]="userModel.name" type="text" class="form-control" id="name" placeholder="Enter name" name="userName" required>
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input [(ngModel)]="userModel.age" type="text" class="form-control" id="age" placeholder="Enter age" name="userAge">
+  </div>  
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <input [(ngModel)]="userModel.gender" type="number" class="form-control" id="gender" placeholder="Enter gender" name="userGender">
+  </div>
+  <div class="form-group">
+    <label for="cellphone">Cellphone:</label>
+    <input [(ngModel)]="userModel.cellphone" type="text" class="form-control" id="cellphone" placeholder="Enter cellphone" name="userCellphone">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)= 'registerUser()'>Register</button>
+  {{userModel | json}}
+</form>

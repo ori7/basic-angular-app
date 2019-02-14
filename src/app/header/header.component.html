@@ -10,6 +10,9 @@
         <a class="nav-link" href="#" [routerLink]='[""]'>Home</a>
       </li>
       <li *ngIf='!isLogged' class="nav-item active">
+        <a class="nav-link" href="#" [routerLink]='["Register"]'>Register</a>
+      </li>
+      <li *ngIf='!isLogged' class="nav-item active">
         <a class="nav-link" href="#" [routerLink]='["Login"]'>Login</a>
       </li>
     </ul>
