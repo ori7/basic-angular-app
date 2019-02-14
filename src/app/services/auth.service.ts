@@ -22,19 +22,19 @@ export class AuthService {
     }
     else {
       return throwError('user or password incorrect');
-    }
-  }
+    };
+  };
 
   setToken(t: string){
-    return window.localStorage.setItem(environment.tokenKey,t);
-  }
+    window.localStorage.setItem(environment.tokenKey,t);
+  };
 
   getToken(){
     return window.localStorage.getItem(environment.tokenKey);
-  }
+  };
 
   isLogged(): boolean{
     return this.getToken() != null;
-  }
+  };
   
-}
+};
