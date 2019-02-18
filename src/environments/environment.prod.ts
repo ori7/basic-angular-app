@@ -1,5 +1,7 @@
 
 export const environment = {
   production: true,
-  tokenKey: 'token'
+  tokenKey: 'token',
+  serverUrl: 'http://localhost:3000/',
+  currency: 'NIS'
 };

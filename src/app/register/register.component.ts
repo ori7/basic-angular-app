@@ -18,12 +18,6 @@ export class RegisterComponent implements OnInit {
 
   registerUser(){
     console.log(this.userModel);
-    /*
-    this.userModel.name = f.userName.value;
-    this.userModel.age = f.userAge.value;
-    this.userModel.gender = f.userGender.value;
-    this.userModel.cellphone = f.userCellphone.value;
-    */
   }
 
 }

@@ -18,14 +18,12 @@ export class LoginComponent implements OnInit {
     this.authService
     .login(emailHtmlElement.value, passwordHtmlElement.value)
     .subscribe((successRes) => {
-      console.log(successRes);
-      this.router.navigate(["Member"]);
+      this.router.navigate(["Member", 1]);
     }, (errorRes) => {
-      console.log(errorRes);
       emailHtmlElement.value = passwordHtmlElement.value = '';
     })
     
-  }
+  };
 
   ngOnInit() {
   }
