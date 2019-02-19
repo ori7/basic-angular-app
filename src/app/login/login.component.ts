@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     this.authService
     .login(emailHtmlElement.value, passwordHtmlElement.value)
     .subscribe((successRes) => {
-      this.router.navigate(["Member", 1]);
+      this.router.navigate(["Members", successRes[1]]);
     }, (errorRes) => {
       emailHtmlElement.value = passwordHtmlElement.value = '';
     })

@@ -11,6 +11,6 @@ export class MemberService {
   constructor( private httpClient: HttpClient) { }
 
   memberData(id): Observable<any>{
-    return this.httpClient.get(environment.serverUrl + 'members/' + id);
+    return this.httpClient.get(environment.serverUrl + 'Members/' + id);
   };
 };

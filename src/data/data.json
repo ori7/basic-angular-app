@@ -5,6 +5,18 @@
             "budget": 100,
             "totalProducts": 3,
             "lastPrice": 1550510167135
+        },
+        {
+            "id": 2,
+            "budget": 320,
+            "totalProducts": 7,
+            "lastPrice": 5673456356346
+        },
+        {
+            "id": 3,
+            "budget": 70,
+            "totalProducts": 2,
+            "lastPrice": 4757457576754
         }
     ]
 }

@@ -14,14 +14,15 @@ export class MemberComponent implements OnInit {
   constructor(private memberService: MemberService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe(id =>{
-      console.log(id)
-      this.id = id
+    this.activatedRoute.params.subscribe(objectId => {
+      this.id = objectId['id'];
     });
-    this.memberService.memberData(this.id)
-    .subscribe(memberDataRes => {
-      this.memberData = memberDataRes;
-    })
+    if (this.id) {
+      this.memberService.memberData(this.id)
+        .subscribe(memberDataRes => {
+          this.memberData = memberDataRes;
+        })
+    }
   };
 
 };
